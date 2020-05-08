@@ -40,7 +40,9 @@
 
 
 <meta property="og:title" content="Add GIBS Layers — addGIBS" />
-<meta property="og:description" content="Add GIBS Layers" />
+<meta property="og:description" content="A leaflet plugin for NASA EOSDIS GIBS imagery integration. 154 products are
+available. The date can be set dynamically for multi-temporal products. No-data
+pixels of MODIS Multiband Imagery can be made transparent." />
 
 
 
@@ -117,7 +119,9 @@
     </div>
 
     <div class="ref-description">
-    <p>Add GIBS Layers</p>
+    <p>A leaflet plugin for NASA EOSDIS GIBS imagery integration. 154 products are
+available. The date can be set dynamically for multi-temporal products. No-data
+pixels of MODIS Multiband Imagery can be made transparent.</p>
     </div>
 
     <pre class="usage"><span class='fu'>addGIBS</span>(
@@ -134,42 +138,46 @@
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>map</th>
-      <td><p>A map widget object created from <code><a href='https://rdrr.io/pkg/leaflet/man/leaflet.html'>leaflet</a></code></p></td>
+      <td><p>a map widget object created from <code><a href='https://rdrr.io/pkg/leaflet/man/leaflet.html'>leaflet</a>()</code></p></td>
     </tr>
     <tr>
       <th>layers</th>
-      <td><p>vector of GIBS-layers. See <code><a href='gibs_layers.html'>gibs_layers</a></code></p></td>
+      <td><p>A character vector of GIBS-layers. See <code><a href='gibs_layers.html'>gibs_layers</a></code></p></td>
     </tr>
     <tr>
       <th>group</th>
       <td><p>the name of the group the newly created layers should belong to
-(for<code><a href='https://rdrr.io/pkg/leaflet/man/remove.html'>clearGroup</a></code> and
-<code><a href='https://rdrr.io/pkg/leaflet/man/addLayersControl.html'>addLayersControl</a></code> purposes). Human-friendly group
-names are permitted–they need not be short, identifier-style names. Any
-number of layers and even different types of layers (e.g. markers and
-polygons) can share the same group name.</p></td>
+(for <code><a href='https://rdrr.io/pkg/leaflet/man/remove.html'>clearGroup</a></code> and <code><a href='https://rdrr.io/pkg/leaflet/man/addLayersControl.html'>addLayersControl</a></code> purposes).
+Human-friendly group names are permitted--they need not be short,
+identifier-style names. Any number of layers and even different types of
+layers (e.g. markers and polygons) can share the same group name.</p></td>
     </tr>
     <tr>
       <th>dates</th>
-      <td><p>Date object. If multiple <code>layers</code> are added, you can add
-a Date vector of the same length</p></td>
+      <td><p>Date object. If multiple <code>layers</code> are added, you can add a
+Date vector of the same length</p></td>
     </tr>
     <tr>
       <th>opacity</th>
-      <td><p>numeric value determining the opacity. If multiple
+      <td><p>Numeric value determining the opacity. If multiple
 <code>layers</code> are added, you can add a numeric vector of the same length</p></td>
     </tr>
     <tr>
       <th>transparent</th>
-      <td><p>Should the layer be transparent. If multiple
-<code>layers</code> are added, you can add a boolean vector of the same length</p></td>
+      <td><p>Should the layer be transparent. If multiple <code>layers</code>
+are added, you can add a boolean vector of the same length</p></td>
     </tr>
     </table>
 
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>the new <code>map</code> object</p>
+    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+
+    <p><a href='https://github.com/aparshin/leaflet-GIBS'>https://github.com/aparshin/leaflet-GIBS</a></p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><a href='https://github.com/aparshin/leaflet-GIBS'>https://github.com/aparshin/leaflet-GIBS</a></p>
-<p>Other GIBS Functions: 
+    <div class='dont-index'><p>Other GIBS Functions: 
 <code><a href='setDate.html'>setDate</a>()</code>,
 <code><a href='setTransparent.html'>setTransparent</a>()</code></p></div>
 

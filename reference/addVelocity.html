@@ -135,7 +135,7 @@
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>map</th>
-      <td><p>a map widget</p></td>
+      <td><p>a map widget object created from <code><a href='https://rdrr.io/pkg/leaflet/man/leaflet.html'>leaflet</a>()</code></p></td>
     </tr>
     <tr>
       <th>layerId</th>
@@ -144,8 +144,8 @@
     <tr>
       <th>group</th>
       <td><p>the name of the group the newly created layers should belong to
-(for <code>clearGroup</code> and <code>addLayersControl</code> purposes).
-Human-friendly group names are permitted–they need not be short,
+(for <code><a href='https://rdrr.io/pkg/leaflet/man/remove.html'>clearGroup</a></code> and <code><a href='https://rdrr.io/pkg/leaflet/man/addLayersControl.html'>addLayersControl</a></code> purposes).
+Human-friendly group names are permitted--they need not be short,
 identifier-style names. Any number of layers and even different types of
 layers (e.g. markers and polygons) can share the same group name.</p></td>
     </tr>
@@ -158,14 +158,19 @@ files</a> for some example data.</p></td>
     </tr>
     <tr>
       <th>options</th>
-      <td><p>see <code><a href='velocityOptions.html'>velocityOptions</a></code></p></td>
+      <td><p>List of further options. See <code><a href='velocityOptions.html'>velocityOptions</a></code></p></td>
     </tr>
     </table>
 
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>the new <code>map</code> object</p>
+    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+
+    <p><a href='https://github.com/danwild/leaflet-velocity'>https://github.com/danwild/leaflet-velocity</a></p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><a href='https://github.com/danwild/leaflet-velocity'>https://github.com/danwild/leaflet-velocity</a></p>
-<p>Other Velocity Functions: 
+    <div class='dont-index'><p>Other Velocity Functions: 
 <code><a href='removeVelocity.html'>removeVelocity</a>()</code>,
 <code><a href='setOptionsVelocity.html'>setOptionsVelocity</a>()</code>,
 <code><a href='velocityOptions.html'>velocityOptions</a>()</code></p></div>

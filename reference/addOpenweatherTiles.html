@@ -135,7 +135,7 @@
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>map</th>
-      <td><p>A map widget object created from <code><a href='https://rdrr.io/pkg/leaflet/man/leaflet.html'>leaflet</a></code></p></td>
+      <td><p>a map widget object created from <code><a href='https://rdrr.io/pkg/leaflet/man/leaflet.html'>leaflet</a>()</code></p></td>
     </tr>
     <tr>
       <th>apikey</th>
@@ -151,7 +151,11 @@ following layers are currently possible <code><a href='https://rdrr.io/r/base/c.
     </tr>
     <tr>
       <th>group</th>
-      <td><p>name of the group</p></td>
+      <td><p>the name of the group the newly created layers should belong to
+(for <code><a href='https://rdrr.io/pkg/leaflet/man/remove.html'>clearGroup</a></code> and <code><a href='https://rdrr.io/pkg/leaflet/man/addLayersControl.html'>addLayersControl</a></code> purposes).
+Human-friendly group names are permitted--they need not be short,
+identifier-style names. Any number of layers and even different types of
+layers (e.g. markers and polygons) can share the same group name.</p></td>
     </tr>
     <tr>
       <th>layerId</th>
@@ -167,15 +171,20 @@ following layers are currently possible <code><a href='https://rdrr.io/r/base/c.
     </tr>
     </table>
 
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>the new <code>map</code> object</p>
     <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
 
     <p>Out of the box a legend image is only available for Pressure,
   Precipitation Classic, Clouds Classic, Rain Classic, Snow, Temperature and
   Wind Speed. Please add your own images if you need some more.</p>
+    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+
+    <p><a href='https://github.com/trafficonese/leaflet-openweathermap'>https://github.com/trafficonese/leaflet-openweathermap</a></p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><a href='https://github.com/trafficonese/leaflet-openweathermap'>https://github.com/trafficonese/leaflet-openweathermap</a></p>
-<p>Other Openweathermap Functions: 
+    <div class='dont-index'><p>Other Openweathermap Functions: 
 <code><a href='addOpenweatherCurrent.html'>addOpenweatherCurrent</a>()</code>,
 <code><a href='openweatherCurrentOptions.html'>openweatherCurrentOptions</a>()</code>,
 <code><a href='openweatherOptions.html'>openweatherOptions</a>()</code></p></div>

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Adds a Sidebar Leaflet Control — addSidebar • leaflet.extras2</title>
+<title>Add a Sidebar Leaflet Control — addSidebar • leaflet.extras2</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,11 @@
 
 
 
-<meta property="og:title" content="Adds a Sidebar Leaflet Control — addSidebar" />
-<meta property="og:description" content="Adds a Sidebar Leaflet Control" />
+<meta property="og:title" content="Add a Sidebar Leaflet Control — addSidebar" />
+<meta property="og:description" content="The sidebar plugin only works in a reactive environment (e.g Shiny), as the
+HTML must be created by using sidebar_tabs and
+sidebar_pane and it must be created before
+leafletOutput." />
 
 
 
@@ -111,13 +114,16 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Adds a Sidebar Leaflet Control</h1>
+    <h1>Add a Sidebar Leaflet Control</h1>
     <small class="dont-index">Source: <a href='https://github.com/trafficonese/leaflet.extras2/blob/master/R/sidebar.R'><code>R/sidebar.R</code></a></small>
     <div class="hidden name"><code>addSidebar.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Adds a Sidebar Leaflet Control</p>
+    <p>The sidebar plugin only works in a reactive environment (e.g Shiny), as the
+HTML must be created by using <code><a href='sidebar_tabs.html'>sidebar_tabs</a></code> and
+<code><a href='sidebar_pane.html'>sidebar_pane</a></code> and it must be created before
+<code><a href='https://rdrr.io/pkg/leaflet/man/map-shiny.html'>leafletOutput</a></code>.</p>
     </div>
 
     <pre class="usage"><span class='fu'>addSidebar</span>(<span class='no'>map</span>, <span class='kw'>id</span> <span class='kw'>=</span> <span class='st'>"sidebar"</span>, <span class='kw'>options</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>position</span> <span class='kw'>=</span> <span class='st'>"left"</span>, <span class='kw'>fit</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>))</pre>
@@ -131,7 +137,8 @@
     </tr>
     <tr>
       <th>id</th>
-      <td><p>Id of the sidebar-div</p></td>
+      <td><p>Id of the sidebar-div. Must match with the <code>id</code> of
+<code><a href='sidebar_tabs.html'>sidebar_tabs</a></code></p></td>
     </tr>
     <tr>
       <th>options</th>
@@ -139,10 +146,15 @@
     </tr>
     </table>
 
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>the new <code>map</code> object</p>
+    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+
+    <p><a href='https://github.com/Turbo87/sidebar-v2'>https://github.com/Turbo87/sidebar-v2</a></p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><a href='https://github.com/Turbo87/sidebar-v2'>https://github.com/Turbo87/sidebar-v2</a></p>
-<p>Other Sidebar Functions: 
+    <div class='dont-index'><p>Other Sidebar Functions: 
 <code><a href='closeSidebar.html'>closeSidebar</a>()</code>,
 <code><a href='openSidebar.html'>openSidebar</a>()</code>,
 <code><a href='removeSidebar.html'>removeSidebar</a>()</code>,

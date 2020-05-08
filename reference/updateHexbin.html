@@ -40,7 +40,7 @@
 
 
 <meta property="og:title" content="updateHexbin — updateHexbin" />
-<meta property="og:description" content="updateHexbin" />
+<meta property="og:description" content="Dynamically change the data and/or the colorRange." />
 
 
 
@@ -117,7 +117,7 @@
     </div>
 
     <div class="ref-description">
-    <p>updateHexbin</p>
+    <p>Dynamically change the <code>data</code> and/or the <code>colorRange</code>.</p>
     </div>
 
     <pre class="usage"><span class='fu'>updateHexbin</span>(<span class='no'>map</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>lng</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>lat</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>colorRange</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
@@ -127,34 +127,38 @@
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>map</th>
-      <td><p>A map widget object created from <code><a href='https://rdrr.io/pkg/leaflet/man/leaflet.html'>leaflet</a></code></p></td>
+      <td><p>a map widget object created from <code><a href='https://rdrr.io/pkg/leaflet/man/leaflet.html'>leaflet</a>()</code></p></td>
     </tr>
     <tr>
       <th>data</th>
       <td><p>the data object from which the argument values are derived; by
-default, it is the data object provided to leaflet() initially, but can be
-overridden.</p></td>
+default, it is the <code>data</code> object provided to <code>leaflet()</code>
+initially, but can be overridden</p></td>
     </tr>
     <tr>
       <th>lng</th>
       <td><p>a numeric vector of longitudes, or a one-sided formula of the form
-~x where x is a variable in data; by default (if not explicitly provided),
-it will be automatically inferred from data by looking for a column named
-lng, long, or longitude (case-insensitively)</p></td>
+<code>~x</code> where <code>x</code> is a variable in <code>data</code>; by default (if not
+explicitly provided), it will be automatically inferred from <code>data</code> by
+looking for a column named <code>lng</code>, <code>long</code>, or <code>longitude</code>
+(case-insensitively)</p></td>
     </tr>
     <tr>
       <th>lat</th>
-      <td><p>a vector of latitudes or a formula (similar to the lng argument;
-the names lat and latitude are used when guessing the latitude column from
-data)</p></td>
+      <td><p>a vector of latitudes or a formula (similar to the <code>lng</code>
+argument; the names <code>lat</code> and <code>latitude</code> are used when guessing
+the latitude column from <code>data</code>)</p></td>
     </tr>
     <tr>
       <th>colorRange</th>
-      <td><p>Sets the range of the color scale used to fill the
-hexbins on the layer.</p></td>
+      <td><p>The range of the color scale used to fill the
+hexbins</p></td>
     </tr>
     </table>
 
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>the new <code>map</code> object</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other Hexbin-D3 Functions: 

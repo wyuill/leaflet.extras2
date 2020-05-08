@@ -40,7 +40,7 @@
 
 
 <meta property="og:title" content="Set Transparency for GIBS Layers — setTransparent" />
-<meta property="og:description" content="Set Transparency for GIBS Layers" />
+<meta property="og:description" content="Change the transparency for no-data pixels." />
 
 
 
@@ -117,7 +117,7 @@
     </div>
 
     <div class="ref-description">
-    <p>Set Transparency for GIBS Layers</p>
+    <p>Change the transparency for no-data pixels.</p>
     </div>
 
     <pre class="usage"><span class='fu'>setTransparent</span>(<span class='no'>map</span>, <span class='kw'>layers</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>transparent</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
@@ -127,19 +127,22 @@
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>map</th>
-      <td><p>A map widget object created from <code><a href='https://rdrr.io/pkg/leaflet/man/leaflet.html'>leaflet</a></code></p></td>
+      <td><p>a map widget object created from <code><a href='https://rdrr.io/pkg/leaflet/man/leaflet.html'>leaflet</a>()</code></p></td>
     </tr>
     <tr>
       <th>layers</th>
-      <td><p>vector of GIBS-layers. See <code><a href='gibs_layers.html'>gibs_layers</a></code></p></td>
+      <td><p>A character vector of GIBS-layers. See <code><a href='gibs_layers.html'>gibs_layers</a></code></p></td>
     </tr>
     <tr>
       <th>transparent</th>
-      <td><p>Should the layer be transparent. If multiple
-<code>layers</code> are added, you can add a boolean vector of the same length</p></td>
+      <td><p>Should the layer be transparent. If multiple <code>layers</code>
+are added, you can add a boolean vector of the same length</p></td>
     </tr>
     </table>
 
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>the new <code>map</code> object</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other GIBS Functions: 

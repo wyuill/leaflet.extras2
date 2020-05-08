@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Create a Sidebar Panel — sidebar_pane • leaflet.extras2</title>
+<title>Create a Sidebar Pane — sidebar_pane • leaflet.extras2</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,8 @@
 
 
 
-<meta property="og:title" content="Create a Sidebar Panel — sidebar_pane" />
-<meta property="og:description" content="Create a Sidebar Panel" />
+<meta property="og:title" content="Create a Sidebar Pane — sidebar_pane" />
+<meta property="og:description" content="Create a Sidebar Pane" />
 
 
 
@@ -111,13 +111,13 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Create a Sidebar Panel</h1>
+    <h1>Create a Sidebar Pane</h1>
     <small class="dont-index">Source: <a href='https://github.com/trafficonese/leaflet.extras2/blob/master/R/sidebar.R'><code>R/sidebar.R</code></a></small>
     <div class="hidden name"><code>sidebar_pane.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Create a Sidebar Panel</p>
+    <p>Create a Sidebar Pane</p>
     </div>
 
     <pre class="usage"><span class='fu'>sidebar_pane</span>(
@@ -140,7 +140,7 @@
     </tr>
     <tr>
       <th>icon</th>
-      <td><p>An icon for the sidebar panel.</p></td>
+      <td><p>An icon for the sidebar panel</p></td>
     </tr>
     <tr>
       <th>...</th>
@@ -148,11 +148,16 @@
     </tr>
     </table>
 
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>A <code>shiny.tag</code> with sidebar-specific HTML classes</p>
+    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+
+    <p><a href='https://github.com/Turbo87/sidebar-v2'>https://github.com/Turbo87/sidebar-v2</a>,
+         <a href='https://github.com/Turbo87/sidebar-v2/blob/master/doc/usage.md'>https://github.com/Turbo87/sidebar-v2/blob/master/doc/usage.md</a></p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><a href='https://github.com/Turbo87/sidebar-v2'>https://github.com/Turbo87/sidebar-v2</a>,
-         <a href='https://github.com/Turbo87/sidebar-v2/blob/master/doc/usage.md'>https://github.com/Turbo87/sidebar-v2/blob/master/doc/usage.md</a></p>
-<p>Other Sidebar Functions: 
+    <div class='dont-index'><p>Other Sidebar Functions: 
 <code><a href='addSidebar.html'>addSidebar</a>()</code>,
 <code><a href='closeSidebar.html'>closeSidebar</a>()</code>,
 <code><a href='openSidebar.html'>openSidebar</a>()</code>,
@@ -162,8 +167,7 @@
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
 <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>shiny</span>)
-<span class='fu'><a href='https://rdrr.io/pkg/shiny/man/runApp.html'>runApp</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste0</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span>(<span class='st'>"examples"</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>"leaflet.extras2"</span>),
-              <span class='st'>"/sidebar_app.R"</span>))
+<span class='fu'>sidebar_pane</span>(<span class='kw'>id</span> <span class='kw'>=</span> <span class='st'>"id"</span>, <span class='kw'>icon</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/icon.html'>icon</a></span>(<span class='st'>"cars"</span>), <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/shiny/man/builder.html'>div</a></span>())
 }</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
