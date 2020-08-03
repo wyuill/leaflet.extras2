@@ -125,14 +125,14 @@ GetFeatureInfo-powered identify.</p>
     </div>
 
     <pre class="usage"><span class='fu'>addWMS</span>(
-  <span class='no'>map</span>,
-  <span class='no'>baseUrl</span>,
-  <span class='kw'>layers</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>group</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>options</span> <span class='kw'>=</span> <span class='fu'>WMSTileOptions</span>(),
-  <span class='kw'>attribution</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>popupOptions</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>data</span> <span class='kw'>=</span> <span class='fu'>getMapData</span>(<span class='no'>map</span>)
+  <span class='kw'>map</span>,
+  <span class='kw'>baseUrl</span>,
+  layers = <span class='kw'>NULL</span>,
+  group = <span class='kw'>NULL</span>,
+  options = <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-options.html'>WMSTileOptions</a></span>(),
+  attribution = <span class='kw'>NULL</span>,
+  popupOptions = <span class='kw'>NULL</span>,
+  data = <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/getMapData.html'>getMapData</a></span>(<span class='kw'>map</span>)
 )</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -177,7 +177,7 @@ layers (e.g. markers and polygons) can share the same group name.</p></td>
     <tr>
       <th>data</th>
       <td><p>the data object from which the argument values are derived; by
-default, it is the <code>data</code> object provided to <code>leaflet()</code>
+default, it is the <code>data</code> object provided to <code><a href='https://rdrr.io/pkg/leaflet/man/leaflet.html'>leaflet()</a></code>
 initially, but can be overridden</p></td>
     </tr>
     </table>
@@ -190,19 +190,19 @@ initially, but can be overridden</p></td>
     <p><a href='https://github.com/heigeo/leaflet.wms'>https://github.com/heigeo/leaflet.wms</a></p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>leaflet</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>leaflet.extras2</span>)
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='kw'><a href='http://rstudio.github.io/leaflet'>leaflet</a></span>)
+<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='kw'><a href='https://trafficonese.github.io/leaflet.extras2'>leaflet.extras2</a></span>)
 
-<span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/leaflet.html'>leaflet</a></span>() <span class='kw'>%&gt;%</span>
-  <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-layers.html'>addTiles</a></span>(<span class='kw'>group</span> <span class='kw'>=</span> <span class='st'>"base"</span>) <span class='kw'>%&gt;%</span>
-  <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-methods.html'>setView</a></span>(<span class='fl'>9</span>, <span class='fl'>50</span>, <span class='fl'>5</span>) <span class='kw'>%&gt;%</span>
-  <span class='fu'>addWMS</span>(<span class='kw'>baseUrl</span> <span class='kw'>=</span> <span class='st'>"https://maps.dwd.de/geoserver/dwd/wms"</span>,
-         <span class='kw'>layers</span> <span class='kw'>=</span> <span class='st'>"dwd:BRD_1km_winddaten_10m"</span>,
-      <span class='kw'>popupOptions</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-options.html'>popupOptions</a></span>(<span class='kw'>maxWidth</span> <span class='kw'>=</span> <span class='fl'>600</span>),
-      <span class='kw'>options</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-options.html'>WMSTileOptions</a></span>(
-        <span class='kw'>transparent</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>,
-        <span class='kw'>format</span> <span class='kw'>=</span> <span class='st'>"image/png"</span>,
-        <span class='kw'>info_format</span> <span class='kw'>=</span> <span class='st'>"text/html"</span>))</div></pre>
+<span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/leaflet.html'>leaflet</a></span>() <span class='op'>%&gt;%</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-layers.html'>addTiles</a></span>(group = <span class='st'>"base"</span>) <span class='op'>%&gt;%</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-methods.html'>setView</a></span>(<span class='fl'>9</span>, <span class='fl'>50</span>, <span class='fl'>5</span>) <span class='op'>%&gt;%</span>
+  <span class='fu'>addWMS</span>(baseUrl = <span class='st'>"https://maps.dwd.de/geoserver/dwd/wms"</span>,
+         layers = <span class='st'>"dwd:BRD_1km_winddaten_10m"</span>,
+      popupOptions = <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-options.html'>popupOptions</a></span>(maxWidth = <span class='fl'>600</span>),
+      options = <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-options.html'>WMSTileOptions</a></span>(
+        transparent = <span class='fl'>TRUE</span>,
+        format = <span class='st'>"image/png"</span>,
+        info_format = <span class='st'>"text/html"</span>))</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

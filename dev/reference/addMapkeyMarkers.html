@@ -121,20 +121,20 @@
     </div>
 
     <pre class="usage"><span class='fu'>addMapkeyMarkers</span>(
-  <span class='no'>map</span>,
-  <span class='kw'>lng</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>lat</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>layerId</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>group</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>icon</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>popup</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>popupOptions</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>label</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>labelOptions</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>options</span> <span class='kw'>=</span> <span class='kw pkg'>leaflet</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-options.html'>markerOptions</a></span>(),
-  <span class='kw'>clusterOptions</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>clusterId</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>data</span> <span class='kw'>=</span> <span class='kw pkg'>leaflet</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/getMapData.html'>getMapData</a></span>(<span class='no'>map</span>)
+  <span class='kw'>map</span>,
+  lng = <span class='kw'>NULL</span>,
+  lat = <span class='kw'>NULL</span>,
+  layerId = <span class='kw'>NULL</span>,
+  group = <span class='kw'>NULL</span>,
+  icon = <span class='kw'>NULL</span>,
+  popup = <span class='kw'>NULL</span>,
+  popupOptions = <span class='kw'>NULL</span>,
+  label = <span class='kw'>NULL</span>,
+  labelOptions = <span class='kw'>NULL</span>,
+  options = <span class='kw'>leaflet</span>::<span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-options.html'>markerOptions</a></span>(),
+  clusterOptions = <span class='kw'>NULL</span>,
+  clusterId = <span class='kw'>NULL</span>,
+  data = <span class='kw'>leaflet</span>::<span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/getMapData.html'>getMapData</a></span>(<span class='kw'>map</span>)
 )</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -212,7 +212,7 @@ options</p></td>
     <tr>
       <th>data</th>
       <td><p>the data object from which the argument values are derived; by
-default, it is the <code>data</code> object provided to <code>leaflet()</code>
+default, it is the <code>data</code> object provided to <code><a href='https://rdrr.io/pkg/leaflet/man/leaflet.html'>leaflet()</a></code>
 initially, but can be overridden</p></td>
     </tr>
     </table>
@@ -226,23 +226,23 @@ initially, but can be overridden</p></td>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other Mapkey Functions: 
-<code><a href='sub-.leaflet_mapkey_icon_set.html'>[.leaflet_mapkey_icon_set</a>()</code>,
+<code><a href='[.leaflet_mapkey_icon_set.html'>[.leaflet_mapkey_icon_set</a>()</code>,
 <code><a href='makeMapkeyIcon.html'>makeMapkeyIcon</a>()</code>,
 <code><a href='mapkeyIconList.html'>mapkeyIconList</a>()</code>,
 <code><a href='mapkeyIcons.html'>mapkeyIcons</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>leaflet</span>)
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='kw'><a href='http://rstudio.github.io/leaflet'>leaflet</a></span>)
 
-<span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/leaflet.html'>leaflet</a></span>()  <span class='kw'>%&gt;%</span>
-  <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-layers.html'>addTiles</a></span>() <span class='kw'>%&gt;%</span>
-  <span class='fu'>addMapkeyMarkers</span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>breweries91</span>,
-                <span class='kw'>icon</span> <span class='kw'>=</span> <span class='fu'><a href='makeMapkeyIcon.html'>makeMapkeyIcon</a></span>(<span class='kw'>icon</span> <span class='kw'>=</span> <span class='st'>"mapkey"</span>,
-                                      <span class='kw'>iconSize</span> <span class='kw'>=</span> <span class='fl'>30</span>,
-                                      <span class='kw'>boxShadow</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
-                                      <span class='kw'>background</span> <span class='kw'>=</span> <span class='st'>"transparent"</span>),
-                <span class='kw'>group</span> <span class='kw'>=</span> <span class='st'>"mapkey"</span>,
-                <span class='kw'>label</span> <span class='kw'>=</span> ~<span class='no'>state</span>, <span class='kw'>popup</span> <span class='kw'>=</span> ~<span class='no'>village</span>)</div></pre>
+<span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/leaflet.html'>leaflet</a></span>()  <span class='op'>%&gt;%</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-layers.html'>addTiles</a></span>() <span class='op'>%&gt;%</span>
+  <span class='fu'>addMapkeyMarkers</span>(data = <span class='kw'>breweries91</span>,
+                icon = <span class='fu'><a href='makeMapkeyIcon.html'>makeMapkeyIcon</a></span>(icon = <span class='st'>"mapkey"</span>,
+                                      iconSize = <span class='fl'>30</span>,
+                                      boxShadow = <span class='fl'>FALSE</span>,
+                                      background = <span class='st'>"transparent"</span>),
+                group = <span class='st'>"mapkey"</span>,
+                label = <span class='op'>~</span><span class='kw'>state</span>, popup = <span class='op'>~</span><span class='kw'>village</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

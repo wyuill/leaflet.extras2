@@ -123,11 +123,11 @@
     </div>
 
     <pre class="usage"><span class='fu'>addVelocity</span>(
-  <span class='no'>map</span>,
-  <span class='kw'>layerId</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>group</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>content</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>options</span> <span class='kw'>=</span> <span class='fu'><a href='velocityOptions.html'>velocityOptions</a></span>()
+  <span class='kw'>map</span>,
+  layerId = <span class='kw'>NULL</span>,
+  group = <span class='kw'>NULL</span>,
+  content = <span class='kw'>NULL</span>,
+  options = <span class='fu'><a href='velocityOptions.html'>velocityOptions</a></span>()
 )</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -176,15 +176,15 @@ files</a> for some example data.</p></td>
 <code><a href='velocityOptions.html'>velocityOptions</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>leaflet</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>leaflet.extras2</span>)
-<span class='no'>content</span> <span class='kw'>&lt;-</span> <span class='st'>"https://raw.githubusercontent.com/danwild/leaflet-velocity/master/demo/wind-gbr.json"</span>
-<span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/leaflet.html'>leaflet</a></span>() <span class='kw'>%&gt;%</span>
-  <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-layers.html'>addTiles</a></span>(<span class='kw'>group</span> <span class='kw'>=</span> <span class='st'>"base"</span>) <span class='kw'>%&gt;%</span>
-  <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-methods.html'>setView</a></span>(<span class='fl'>145</span>, -<span class='fl'>20</span>, <span class='fl'>4</span>) <span class='kw'>%&gt;%</span>
-  <span class='fu'>addVelocity</span>(<span class='kw'>content</span> <span class='kw'>=</span> <span class='no'>content</span>, <span class='kw'>group</span> <span class='kw'>=</span> <span class='st'>"velo"</span>, <span class='kw'>layerId</span> <span class='kw'>=</span> <span class='st'>"veloid"</span>) <span class='kw'>%&gt;%</span>
-  <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/addLayersControl.html'>addLayersControl</a></span>(<span class='kw'>baseGroups</span> <span class='kw'>=</span> <span class='st'>"base"</span>, <span class='kw'>overlayGroups</span> <span class='kw'>=</span> <span class='st'>"velo"</span>)
+    <pre class="examples"><div class='input'><span class='co'>if</span> (<span class='fl'>FALSE</span>) {
+<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='kw'><a href='http://rstudio.github.io/leaflet'>leaflet</a></span>)
+<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='kw'><a href='https://trafficonese.github.io/leaflet.extras2'>leaflet.extras2</a></span>)
+<span class='kw'>content</span> <span class='op'>&lt;-</span> <span class='st'>"https://raw.githubusercontent.com/danwild/leaflet-velocity/master/demo/wind-gbr.json"</span>
+<span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/leaflet.html'>leaflet</a></span>() <span class='op'>%&gt;%</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-layers.html'>addTiles</a></span>(group = <span class='st'>"base"</span>) <span class='op'>%&gt;%</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-methods.html'>setView</a></span>(<span class='fl'>145</span>, <span class='op'>-</span><span class='fl'>20</span>, <span class='fl'>4</span>) <span class='op'>%&gt;%</span>
+  <span class='fu'>addVelocity</span>(content = <span class='kw'>content</span>, group = <span class='st'>"velo"</span>, layerId = <span class='st'>"veloid"</span>) <span class='op'>%&gt;%</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/addLayersControl.html'>addLayersControl</a></span>(baseGroups = <span class='st'>"base"</span>, overlayGroups = <span class='st'>"velo"</span>)
 }</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

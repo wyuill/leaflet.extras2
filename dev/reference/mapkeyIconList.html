@@ -120,7 +120,7 @@
     <p>Make Mapkey-icon set</p>
     </div>
 
-    <pre class="usage"><span class='fu'>mapkeyIconList</span>(<span class='no'>...</span>)</pre>
+    <pre class="usage"><span class='fu'>mapkeyIconList</span>(<span class='kw'>...</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -140,17 +140,17 @@
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other Mapkey Functions: 
-<code><a href='sub-.leaflet_mapkey_icon_set.html'>[.leaflet_mapkey_icon_set</a>()</code>,
+<code><a href='[.leaflet_mapkey_icon_set.html'>[.leaflet_mapkey_icon_set</a>()</code>,
 <code><a href='addMapkeyMarkers.html'>addMapkeyMarkers</a>()</code>,
 <code><a href='makeMapkeyIcon.html'>makeMapkeyIcon</a>()</code>,
 <code><a href='mapkeyIcons.html'>mapkeyIcons</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>iconSet</span> <span class='kw'>=</span> <span class='fu'>mapkeyIconList</span>(
-  <span class='kw'>red</span> <span class='kw'>=</span> <span class='fu'><a href='makeMapkeyIcon.html'>makeMapkeyIcon</a></span>(<span class='kw'>color</span> <span class='kw'>=</span> <span class='st'>"#ff0000"</span>),
-  <span class='kw'>blue</span> <span class='kw'>=</span> <span class='fu'><a href='makeMapkeyIcon.html'>makeMapkeyIcon</a></span>(<span class='kw'>color</span> <span class='kw'>=</span> <span class='st'>"#0000ff"</span>)
+    <pre class="examples"><div class='input'><span class='kw'>iconSet</span> <span class='op'>=</span> <span class='fu'>mapkeyIconList</span>(
+  red = <span class='fu'><a href='makeMapkeyIcon.html'>makeMapkeyIcon</a></span>(color = <span class='st'>"#ff0000"</span>),
+  blue = <span class='fu'><a href='makeMapkeyIcon.html'>makeMapkeyIcon</a></span>(color = <span class='st'>"#0000ff"</span>)
 )
-<span class='no'>iconSet</span>[<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"red"</span>, <span class='st'>"blue"</span>)]</div><div class='output co'>#&gt; $red
+<span class='kw'>iconSet</span>[<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"red"</span>, <span class='st'>"blue"</span>)]</div><div class='output co'>#&gt; $red
 #&gt; $icon
 #&gt; [1] "mapkey"
 #&gt; 

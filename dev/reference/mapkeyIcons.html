@@ -127,17 +127,17 @@ these arguments will be ignored.</p>
     </div>
 
     <pre class="usage"><span class='fu'>mapkeyIcons</span>(
-  <span class='kw'>icon</span> <span class='kw'>=</span> <span class='st'>"mapkey"</span>,
-  <span class='kw'>color</span> <span class='kw'>=</span> <span class='st'>"#ff0000"</span>,
-  <span class='kw'>iconSize</span> <span class='kw'>=</span> <span class='fl'>12</span>,
-  <span class='kw'>background</span> <span class='kw'>=</span> <span class='st'>"#1F7499"</span>,
-  <span class='kw'>borderRadius</span> <span class='kw'>=</span> <span class='st'>"100%"</span>,
-  <span class='kw'>hoverScale</span> <span class='kw'>=</span> <span class='fl'>1.4</span>,
-  <span class='kw'>hoverEffect</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>,
-  <span class='kw'>hoverCSS</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>additionalCSS</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>htmlCode</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>boxShadow</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>
+  icon = <span class='st'>"mapkey"</span>,
+  color = <span class='st'>"#ff0000"</span>,
+  iconSize = <span class='fl'>12</span>,
+  background = <span class='st'>"#1F7499"</span>,
+  borderRadius = <span class='st'>"100%"</span>,
+  hoverScale = <span class='fl'>1.4</span>,
+  hoverEffect = <span class='fl'>TRUE</span>,
+  hoverCSS = <span class='kw'>NULL</span>,
+  additionalCSS = <span class='kw'>NULL</span>,
+  htmlCode = <span class='kw'>NULL</span>,
+  boxShadow = <span class='fl'>TRUE</span>
 )</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -202,19 +202,19 @@ color:#99defc !important;")</p></td>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other Mapkey Functions: 
-<code><a href='sub-.leaflet_mapkey_icon_set.html'>[.leaflet_mapkey_icon_set</a>()</code>,
+<code><a href='[.leaflet_mapkey_icon_set.html'>[.leaflet_mapkey_icon_set</a>()</code>,
 <code><a href='addMapkeyMarkers.html'>addMapkeyMarkers</a>()</code>,
 <code><a href='makeMapkeyIcon.html'>makeMapkeyIcon</a>()</code>,
 <code><a href='mapkeyIconList.html'>mapkeyIconList</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>leaflet</span>)
-<span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/leaflet.html'>leaflet</a></span>()  <span class='kw'>%&gt;%</span>
-  <span class='fu'><a href='addMapkeyMarkers.html'>addMapkeyMarkers</a></span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>breweries91</span>,
-                   <span class='kw'>icon</span> <span class='kw'>=</span> <span class='fu'>mapkeyIcons</span>(
-                     <span class='kw'>color</span> <span class='kw'>=</span> <span class='st'>"red"</span>,
-                     <span class='kw'>borderRadius</span> <span class='kw'>=</span> <span class='fl'>0</span>,
-                     <span class='kw'>iconSize</span> <span class='kw'>=</span> <span class='fl'>25</span>))</div></pre>
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='kw'><a href='http://rstudio.github.io/leaflet'>leaflet</a></span>)
+<span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/leaflet.html'>leaflet</a></span>()  <span class='op'>%&gt;%</span>
+  <span class='fu'><a href='addMapkeyMarkers.html'>addMapkeyMarkers</a></span>(data = <span class='kw'>breweries91</span>,
+                   icon = <span class='fu'>mapkeyIcons</span>(
+                     color = <span class='st'>"red"</span>,
+                     borderRadius = <span class='fl'>0</span>,
+                     iconSize = <span class='fl'>25</span>))</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

@@ -120,7 +120,7 @@
     <p>Adds a Tangram layer to a Leaflet map in a Shiny App.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>addTangram</span>(<span class='no'>map</span>, <span class='kw'>scene</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>layerId</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>group</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>options</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
+    <pre class="usage"><span class='fu'>addTangram</span>(<span class='kw'>map</span>, scene = <span class='kw'>NULL</span>, layerId = <span class='kw'>NULL</span>, group = <span class='kw'>NULL</span>, options = <span class='kw'>NULL</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -145,7 +145,7 @@ information on how to edit such a .yaml file.</p></td>
     <tr>
       <th>group</th>
       <td><p>The name of the group the newly created layer should belong to
-(for <code>clearGroup</code> and <code>addLayersControl</code> purposes).</p></td>
+(for <code><a href='https://rdrr.io/pkg/leaflet/man/remove.html'>clearGroup</a></code> and <code><a href='https://rdrr.io/pkg/leaflet/man/addLayersControl.html'>addLayersControl</a></code> purposes).</p></td>
     </tr>
     <tr>
       <th>options</th>
@@ -167,29 +167,29 @@ information on how to edit such a .yaml file.</p></td>
     <p><a href='https://github.com/tangrams/tangram'>https://github.com/tangrams/tangram</a></p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>shiny</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>leaflet</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>leaflet.extras2</span>)
+    <pre class="examples"><div class='input'><span class='co'>if</span> (<span class='fl'>FALSE</span>) {
+<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='kw'><a href='http://shiny.rstudio.com'>shiny</a></span>)
+<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='kw'><a href='http://rstudio.github.io/leaflet'>leaflet</a></span>)
+<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='kw'><a href='https://trafficonese.github.io/leaflet.extras2'>leaflet.extras2</a></span>)
 
 <span class='co'>## In the /www folder of a ShinyApp. Must contain the Nextzen API-key</span>
-<span class='no'>scene</span> <span class='kw'>&lt;-</span> <span class='st'>"scene.yaml"</span>
+<span class='kw'>scene</span> <span class='op'>&lt;-</span> <span class='st'>"scene.yaml"</span>
 
-<span class='no'>ui</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/fluidPage.html'>fluidPage</a></span>(<span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-shiny.html'>leafletOutput</a></span>(<span class='st'>"map"</span>))
+<span class='kw'>ui</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/fluidPage.html'>fluidPage</a></span>(<span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-shiny.html'>leafletOutput</a></span>(<span class='st'>"map"</span>))
 
-<span class='no'>server</span> <span class='kw'>&lt;-</span> <span class='kw'>function</span>(<span class='no'>input</span>, <span class='no'>output</span>, <span class='no'>session</span>) {
-  <span class='no'>output</span>$<span class='no'>map</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-shiny.html'>renderLeaflet</a></span>({
-    <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/leaflet.html'>leaflet</a></span>() <span class='kw'>%&gt;%</span>
-      <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-layers.html'>addTiles</a></span>(<span class='kw'>group</span> <span class='kw'>=</span> <span class='st'>"base"</span>) <span class='kw'>%&gt;%</span>
-      <span class='fu'>addTangram</span>(<span class='kw'>scene</span> <span class='kw'>=</span> <span class='no'>scene</span>, <span class='kw'>group</span> <span class='kw'>=</span> <span class='st'>"tangram"</span>) <span class='kw'>%&gt;%</span>
-      <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-layers.html'>addCircleMarkers</a></span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>breweries91</span>, <span class='kw'>group</span> <span class='kw'>=</span> <span class='st'>"brews"</span>) <span class='kw'>%&gt;%</span>
-      <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-methods.html'>setView</a></span>(<span class='fl'>11</span>, <span class='fl'>49.4</span>, <span class='fl'>14</span>) <span class='kw'>%&gt;%</span>
-      <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/addLayersControl.html'>addLayersControl</a></span>(<span class='kw'>baseGroups</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"tangram"</span>, <span class='st'>"base"</span>),
-                       <span class='kw'>overlayGroups</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"brews"</span>))
+<span class='kw'>server</span> <span class='op'>&lt;-</span> <span class='fu'>function</span>(<span class='kw'>input</span>, <span class='kw'>output</span>, <span class='kw'>session</span>) {
+  <span class='kw'>output</span><span class='op'>$</span><span class='kw'>map</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-shiny.html'>renderLeaflet</a></span>({
+    <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/leaflet.html'>leaflet</a></span>() <span class='op'>%&gt;%</span>
+      <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-layers.html'>addTiles</a></span>(group = <span class='st'>"base"</span>) <span class='op'>%&gt;%</span>
+      <span class='fu'>addTangram</span>(scene = <span class='kw'>scene</span>, group = <span class='st'>"tangram"</span>) <span class='op'>%&gt;%</span>
+      <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-layers.html'>addCircleMarkers</a></span>(data = <span class='kw'>breweries91</span>, group = <span class='st'>"brews"</span>) <span class='op'>%&gt;%</span>
+      <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-methods.html'>setView</a></span>(<span class='fl'>11</span>, <span class='fl'>49.4</span>, <span class='fl'>14</span>) <span class='op'>%&gt;%</span>
+      <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/addLayersControl.html'>addLayersControl</a></span>(baseGroups = <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"tangram"</span>, <span class='st'>"base"</span>),
+                       overlayGroups = <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"brews"</span>))
   })
 }
 
-<span class='fu'><a href='https://rdrr.io/pkg/shiny/man/shinyApp.html'>shinyApp</a></span>(<span class='no'>ui</span>, <span class='no'>server</span>)
+<span class='fu'><a href='https://rdrr.io/pkg/shiny/man/shinyApp.html'>shinyApp</a></span>(<span class='kw'>ui</span>, <span class='kw'>server</span>)
 }</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

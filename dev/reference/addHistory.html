@@ -122,7 +122,7 @@ browser. By default, it is a simple pair of buttons -- back and forward." />
 browser. By default, it is a simple pair of buttons -- back and forward.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>addHistory</span>(<span class='no'>map</span>, <span class='kw'>layerId</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>options</span> <span class='kw'>=</span> <span class='fu'><a href='historyOptions.html'>historyOptions</a></span>())</pre>
+    <pre class="usage"><span class='fu'>addHistory</span>(<span class='kw'>map</span>, layerId = <span class='kw'>NULL</span>, options = <span class='fu'><a href='historyOptions.html'>historyOptions</a></span>())</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -157,9 +157,9 @@ browser. By default, it is a simple pair of buttons -- back and forward.</p>
 <code><a href='historyOptions.html'>historyOptions</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>leaflet</span>)
-<span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/leaflet.html'>leaflet</a></span>()  <span class='kw'>%&gt;%</span>
-  <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-layers.html'>addTiles</a></span>() <span class='kw'>%&gt;%</span>
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='kw'><a href='http://rstudio.github.io/leaflet'>leaflet</a></span>)
+<span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/leaflet.html'>leaflet</a></span>()  <span class='op'>%&gt;%</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-layers.html'>addTiles</a></span>() <span class='op'>%&gt;%</span>
   <span class='fu'>addHistory</span>()</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

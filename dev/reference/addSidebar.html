@@ -126,7 +126,7 @@ HTML must be created by using <code><a href='sidebar_tabs.html'>sidebar_tabs</a>
 <code><a href='https://rdrr.io/pkg/leaflet/man/map-shiny.html'>leafletOutput</a></code>.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>addSidebar</span>(<span class='no'>map</span>, <span class='kw'>id</span> <span class='kw'>=</span> <span class='st'>"sidebar"</span>, <span class='kw'>options</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>position</span> <span class='kw'>=</span> <span class='st'>"left"</span>, <span class='kw'>fit</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>))</pre>
+    <pre class="usage"><span class='fu'>addSidebar</span>(<span class='kw'>map</span>, id = <span class='st'>"sidebar"</span>, options = <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(position = <span class='st'>"left"</span>, fit = <span class='fl'>TRUE</span>))</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -162,9 +162,9 @@ HTML must be created by using <code><a href='sidebar_tabs.html'>sidebar_tabs</a>
 <code><a href='sidebar_tabs.html'>sidebar_tabs</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>shiny</span>)
-<span class='fu'><a href='https://rdrr.io/pkg/shiny/man/runApp.html'>runApp</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste0</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span>(<span class='st'>"examples"</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>"leaflet.extras2"</span>),
+    <pre class="examples"><div class='input'><span class='co'>if</span> (<span class='fl'>FALSE</span>) {
+<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='kw'><a href='http://shiny.rstudio.com'>shiny</a></span>)
+<span class='fu'><a href='https://rdrr.io/pkg/shiny/man/runApp.html'>runApp</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste0</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span>(<span class='st'>"examples"</span>, package = <span class='st'>"leaflet.extras2"</span>),
               <span class='st'>"/sidebar_app.R"</span>))
 }</div></pre>
   </div>

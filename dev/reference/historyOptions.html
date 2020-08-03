@@ -121,18 +121,18 @@
     </div>
 
     <pre class="usage"><span class='fu'>historyOptions</span>(
-  <span class='kw'>position</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"topright"</span>, <span class='st'>"topleft"</span>, <span class='st'>"bottomleft"</span>, <span class='st'>"bottomright"</span>),
-  <span class='kw'>maxMovesToSave</span> <span class='kw'>=</span> <span class='fl'>10</span>,
-  <span class='kw'>backImage</span> <span class='kw'>=</span> <span class='st'>"fa fa-caret-left"</span>,
-  <span class='kw'>forwardImage</span> <span class='kw'>=</span> <span class='st'>"fa fa-caret-right"</span>,
-  <span class='kw'>backText</span> <span class='kw'>=</span> <span class='st'>""</span>,
-  <span class='kw'>forwardText</span> <span class='kw'>=</span> <span class='st'>""</span>,
-  <span class='kw'>backTooltip</span> <span class='kw'>=</span> <span class='st'>"Go to Previous Extent"</span>,
-  <span class='kw'>forwardTooltip</span> <span class='kw'>=</span> <span class='st'>"Go to Next Extent"</span>,
-  <span class='kw'>backImageBeforeText</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>,
-  <span class='kw'>forwardImageBeforeText</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
-  <span class='kw'>orientation</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"horizontal"</span>, <span class='st'>"vertical"</span>),
-  <span class='kw'>shouldSaveMoveInHistory</span> <span class='kw'>=</span> <span class='kw'>NULL</span>
+  position = <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"topright"</span>, <span class='st'>"topleft"</span>, <span class='st'>"bottomleft"</span>, <span class='st'>"bottomright"</span>),
+  maxMovesToSave = <span class='fl'>10</span>,
+  backImage = <span class='st'>"fa fa-caret-left"</span>,
+  forwardImage = <span class='st'>"fa fa-caret-right"</span>,
+  backText = <span class='st'>""</span>,
+  forwardText = <span class='st'>""</span>,
+  backTooltip = <span class='st'>"Go to Previous Extent"</span>,
+  forwardTooltip = <span class='st'>"Go to Next Extent"</span>,
+  backImageBeforeText = <span class='fl'>TRUE</span>,
+  forwardImageBeforeText = <span class='fl'>FALSE</span>,
+  orientation = <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"horizontal"</span>, <span class='st'>"vertical"</span>),
+  shouldSaveMoveInHistory = <span class='kw'>NULL</span>
 )</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -215,14 +215,14 @@ with every move. return false to not save a move.</p></td>
 <code><a href='goForwardHistory.html'>goForwardHistory</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>leaflet</span>)
-<span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/leaflet.html'>leaflet</a></span>()  <span class='kw'>%&gt;%</span>
-  <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-layers.html'>addTiles</a></span>() <span class='kw'>%&gt;%</span>
-    <span class='fu'><a href='addHistory.html'>addHistory</a></span>(<span class='kw'>options</span> <span class='kw'>=</span> <span class='fu'>historyOptions</span>(<span class='kw'>position</span> <span class='kw'>=</span> <span class='st'>"bottomright"</span>,
-    <span class='kw'>maxMovesToSave</span> <span class='kw'>=</span> <span class='fl'>20</span>,
-    <span class='kw'>backText</span> <span class='kw'>=</span>  <span class='st'>"Go back"</span>,
-    <span class='kw'>forwardText</span> <span class='kw'>=</span> <span class='st'>"Go forward"</span>,
-    <span class='kw'>orientation</span> <span class='kw'>=</span> <span class='st'>"vertical"</span>
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='kw'><a href='http://rstudio.github.io/leaflet'>leaflet</a></span>)
+<span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/leaflet.html'>leaflet</a></span>()  <span class='op'>%&gt;%</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-layers.html'>addTiles</a></span>() <span class='op'>%&gt;%</span>
+    <span class='fu'><a href='addHistory.html'>addHistory</a></span>(options = <span class='fu'>historyOptions</span>(position = <span class='st'>"bottomright"</span>,
+    maxMovesToSave = <span class='fl'>20</span>,
+    backText =  <span class='st'>"Go back"</span>,
+    forwardText = <span class='st'>"Go forward"</span>,
+    orientation = <span class='st'>"vertical"</span>
     ))</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

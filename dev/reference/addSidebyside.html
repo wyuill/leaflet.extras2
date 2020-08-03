@@ -123,11 +123,11 @@ The plugin works with Panes, see the example.</p>
     </div>
 
     <pre class="usage"><span class='fu'>addSidebyside</span>(
-  <span class='no'>map</span>,
-  <span class='kw'>layerId</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>leftId</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>rightId</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>options</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>thumbSize</span> <span class='kw'>=</span> <span class='fl'>42</span>, <span class='kw'>padding</span> <span class='kw'>=</span> <span class='fl'>0</span>)
+  <span class='kw'>map</span>,
+  layerId = <span class='kw'>NULL</span>,
+  leftId = <span class='kw'>NULL</span>,
+  rightId = <span class='kw'>NULL</span>,
+  options = <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(thumbSize = <span class='fl'>42</span>, padding = <span class='fl'>0</span>)
 )</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -174,25 +174,25 @@ visible on the <strong>right</strong> side</p></td>
 <code><a href='removeSidebyside.html'>removeSidebyside</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>leaflet</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>leaflet.extras2</span>)
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='kw'><a href='http://rstudio.github.io/leaflet'>leaflet</a></span>)
+<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='kw'><a href='https://trafficonese.github.io/leaflet.extras2'>leaflet.extras2</a></span>)
 
-<span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/leaflet.html'>leaflet</a></span>(<span class='no'>quakes</span>) <span class='kw'>%&gt;%</span>
-  <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/addMapPane.html'>addMapPane</a></span>(<span class='st'>"left"</span>, <span class='kw'>zIndex</span> <span class='kw'>=</span> <span class='fl'>0</span>) <span class='kw'>%&gt;%</span>
-  <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/addMapPane.html'>addMapPane</a></span>(<span class='st'>"right"</span>, <span class='kw'>zIndex</span> <span class='kw'>=</span> <span class='fl'>0</span>) <span class='kw'>%&gt;%</span>
-  <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-layers.html'>addTiles</a></span>(<span class='kw'>group</span> <span class='kw'>=</span> <span class='st'>"base"</span>, <span class='kw'>layerId</span> <span class='kw'>=</span> <span class='st'>"baseid"</span>,
-           <span class='kw'>options</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-options.html'>pathOptions</a></span>(<span class='kw'>pane</span> <span class='kw'>=</span> <span class='st'>"right"</span>)) <span class='kw'>%&gt;%</span>
-  <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/addProviderTiles.html'>addProviderTiles</a></span>(<span class='no'>providers</span>$<span class='no'>CartoDB.DarkMatter</span>, <span class='kw'>group</span><span class='kw'>=</span><span class='st'>"carto"</span>, <span class='kw'>layerId</span> <span class='kw'>=</span> <span class='st'>"cartoid"</span>,
-                   <span class='kw'>options</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-options.html'>pathOptions</a></span>(<span class='kw'>pane</span> <span class='kw'>=</span> <span class='st'>"left"</span>)) <span class='kw'>%&gt;%</span>
-  <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-layers.html'>addCircleMarkers</a></span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>breweries91</span>[<span class='fl'>1</span>:<span class='fl'>15</span>,], <span class='kw'>color</span> <span class='kw'>=</span> <span class='st'>"blue"</span>, <span class='kw'>group</span> <span class='kw'>=</span> <span class='st'>"blue"</span>,
-                   <span class='kw'>options</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-options.html'>pathOptions</a></span>(<span class='kw'>pane</span> <span class='kw'>=</span> <span class='st'>"left"</span>)) <span class='kw'>%&gt;%</span>
-  <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-layers.html'>addCircleMarkers</a></span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>breweries91</span>[<span class='fl'>15</span>:<span class='fl'>20</span>,], <span class='kw'>color</span> <span class='kw'>=</span> <span class='st'>"yellow"</span>, <span class='kw'>group</span> <span class='kw'>=</span> <span class='st'>"yellow"</span>) <span class='kw'>%&gt;%</span>
-  <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-layers.html'>addCircleMarkers</a></span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>breweries91</span>[<span class='fl'>15</span>:<span class='fl'>30</span>,], <span class='kw'>color</span> <span class='kw'>=</span> <span class='st'>"red"</span>, <span class='kw'>group</span> <span class='kw'>=</span> <span class='st'>"red"</span>,
-                   <span class='kw'>options</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-options.html'>pathOptions</a></span>(<span class='kw'>pane</span> <span class='kw'>=</span> <span class='st'>"right"</span>)) <span class='kw'>%&gt;%</span>
-  <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/addLayersControl.html'>addLayersControl</a></span>(<span class='kw'>overlayGroups</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"blue"</span>,<span class='st'>"red"</span>, <span class='st'>"yellow"</span>)) <span class='kw'>%&gt;%</span>
-  <span class='fu'>addSidebyside</span>(<span class='kw'>layerId</span> <span class='kw'>=</span> <span class='st'>"sidecontrols"</span>,
-                <span class='kw'>rightId</span> <span class='kw'>=</span> <span class='st'>"baseid"</span>,
-                <span class='kw'>leftId</span> <span class='kw'>=</span> <span class='st'>"cartoid"</span>)</div></pre>
+<span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/leaflet.html'>leaflet</a></span>(<span class='kw'>quakes</span>) <span class='op'>%&gt;%</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/addMapPane.html'>addMapPane</a></span>(<span class='st'>"left"</span>, zIndex = <span class='fl'>0</span>) <span class='op'>%&gt;%</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/addMapPane.html'>addMapPane</a></span>(<span class='st'>"right"</span>, zIndex = <span class='fl'>0</span>) <span class='op'>%&gt;%</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-layers.html'>addTiles</a></span>(group = <span class='st'>"base"</span>, layerId = <span class='st'>"baseid"</span>,
+           options = <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-options.html'>pathOptions</a></span>(pane = <span class='st'>"right"</span>)) <span class='op'>%&gt;%</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/addProviderTiles.html'>addProviderTiles</a></span>(<span class='kw'>providers</span><span class='op'>$</span><span class='kw'>CartoDB.DarkMatter</span>, group=<span class='st'>"carto"</span>, layerId = <span class='st'>"cartoid"</span>,
+                   options = <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-options.html'>pathOptions</a></span>(pane = <span class='st'>"left"</span>)) <span class='op'>%&gt;%</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-layers.html'>addCircleMarkers</a></span>(data = <span class='kw'>breweries91</span>[<span class='fl'>1</span><span class='op'>:</span><span class='fl'>15</span>,], color = <span class='st'>"blue"</span>, group = <span class='st'>"blue"</span>,
+                   options = <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-options.html'>pathOptions</a></span>(pane = <span class='st'>"left"</span>)) <span class='op'>%&gt;%</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-layers.html'>addCircleMarkers</a></span>(data = <span class='kw'>breweries91</span>[<span class='fl'>15</span><span class='op'>:</span><span class='fl'>20</span>,], color = <span class='st'>"yellow"</span>, group = <span class='st'>"yellow"</span>) <span class='op'>%&gt;%</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-layers.html'>addCircleMarkers</a></span>(data = <span class='kw'>breweries91</span>[<span class='fl'>15</span><span class='op'>:</span><span class='fl'>30</span>,], color = <span class='st'>"red"</span>, group = <span class='st'>"red"</span>,
+                   options = <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-options.html'>pathOptions</a></span>(pane = <span class='st'>"right"</span>)) <span class='op'>%&gt;%</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/addLayersControl.html'>addLayersControl</a></span>(overlayGroups = <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"blue"</span>,<span class='st'>"red"</span>, <span class='st'>"yellow"</span>)) <span class='op'>%&gt;%</span>
+  <span class='fu'>addSidebyside</span>(layerId = <span class='st'>"sidecontrols"</span>,
+                rightId = <span class='st'>"baseid"</span>,
+                leftId = <span class='st'>"cartoid"</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
