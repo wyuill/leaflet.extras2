@@ -157,10 +157,10 @@ A4Landscape or a custom size object. Default is <code>A4Portrait</code></p></td>
 <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='kw'><a href='http://rstudio.github.io/leaflet'>leaflet</a></span>)
 <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='kw'><a href='https://trafficonese.github.io/leaflet.extras2'>leaflet.extras2</a></span>)
 
-<span class='kw'>ui</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/fluidPage.html'>fluidPage</a></span>(
+<span class='kw'>ui</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://shiny.rstudio.com/reference/shiny/latest/fluidPage.html'>fluidPage</a></span>(
   <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-shiny.html'>leafletOutput</a></span>(<span class='st'>"map"</span>),
-  <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/selectInput.html'>selectInput</a></span>(<span class='st'>"scene"</span>, <span class='st'>"Select Scene"</span>, choices = <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"CurrentSize"</span>, <span class='st'>"A4Landscape"</span>, <span class='st'>"A4Portrait"</span>)),
-  <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/actionButton.html'>actionButton</a></span>(<span class='st'>"print"</span>, <span class='st'>"Print Map"</span>)
+  <span class='fu'><a href='https://shiny.rstudio.com/reference/shiny/latest/selectInput.html'>selectInput</a></span>(<span class='st'>"scene"</span>, <span class='st'>"Select Scene"</span>, choices = <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"CurrentSize"</span>, <span class='st'>"A4Landscape"</span>, <span class='st'>"A4Portrait"</span>)),
+  <span class='fu'><a href='https://shiny.rstudio.com/reference/shiny/latest/actionButton.html'>actionButton</a></span>(<span class='st'>"print"</span>, <span class='st'>"Print Map"</span>)
 )
 
 <span class='kw'>server</span> <span class='op'>&lt;-</span> <span class='fu'>function</span>(<span class='kw'>input</span>, <span class='kw'>output</span>, <span class='kw'>session</span>) {
@@ -173,13 +173,13 @@ A4Landscape or a custom size object. Default is <code>A4Portrait</code></p></td>
         exportOnly = <span class='fl'>TRUE</span>
       ))
 })
-  <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/observeEvent.html'>observeEvent</a></span>(<span class='kw'>input</span><span class='op'>$</span><span class='kw'>print</span>, {
+  <span class='fu'><a href='https://shiny.rstudio.com/reference/shiny/latest/observeEvent.html'>observeEvent</a></span>(<span class='kw'>input</span><span class='op'>$</span><span class='kw'>print</span>, {
     <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/leafletProxy.html'>leafletProxy</a></span>(<span class='st'>"map"</span>) <span class='op'>%&gt;%</span>
       <span class='fu'>easyprintMap</span>(sizeModes = <span class='kw'>input</span><span class='op'>$</span><span class='kw'>scene</span>)
 })
 }
 
-<span class='fu'><a href='https://rdrr.io/pkg/shiny/man/shinyApp.html'>shinyApp</a></span>(<span class='kw'>ui</span>, <span class='kw'>server</span>)
+<span class='fu'><a href='https://shiny.rstudio.com/reference/shiny/latest/shinyApp.html'>shinyApp</a></span>(<span class='kw'>ui</span>, <span class='kw'>server</span>)
 }</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
