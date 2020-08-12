@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>playbackOptions — playbackOptions • leaflet.extras2</title>
+<title>removeTimeslider — removeTimeslider • leaflet.extras2</title>
 
 
 <!-- jquery -->
@@ -39,9 +39,8 @@
 
 
 
-<meta property="og:title" content="playbackOptions — playbackOptions" />
-<meta property="og:description" content="A list of options for addPlayback. For a full list please visit
-the plugin repository." />
+<meta property="og:title" content="removeTimeslider — removeTimeslider" />
+<meta property="og:description" content="Remove the Timeslider controls and markers." />
 
 
 <meta name="robots" content="noindex">
@@ -112,97 +111,34 @@ the plugin repository." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>playbackOptions</h1>
-    <small class="dont-index">Source: <a href='https://github.com/trafficonese/leaflet.extras2/blob/master/R/playback.R'><code>R/playback.R</code></a></small>
-    <div class="hidden name"><code>playbackOptions.Rd</code></div>
+    <h1>removeTimeslider</h1>
+    <small class="dont-index">Source: <a href='https://github.com/trafficonese/leaflet.extras2/blob/master/R/timeslider.R'><code>R/timeslider.R</code></a></small>
+    <div class="hidden name"><code>removeTimeslider.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>A list of options for <code><a href='addPlayback.html'>addPlayback</a></code>. For a full list please visit
-the <a href='https://github.com/hallahan/LeafletPlayback'>plugin repository</a>.</p>
+    <p>Remove the Timeslider controls and markers.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>playbackOptions</span>(
-  color = <span class='st'>"blue"</span>,
-  radius = <span class='fl'>5</span>,
-  tickLen = <span class='fl'>250</span>,
-  speed = <span class='fl'>1</span>,
-  maxInterpolationTime = <span class='fl'>5</span> <span class='op'>*</span> <span class='fl'>60</span> <span class='op'>*</span> <span class='fl'>1000</span>,
-  tracksLayer = <span class='fl'>TRUE</span>,
-  playControl = <span class='fl'>TRUE</span>,
-  dateControl = <span class='fl'>TRUE</span>,
-  sliderControl = <span class='fl'>TRUE</span>,
-  staleTime = <span class='fl'>60</span> <span class='op'>*</span> <span class='fl'>60</span> <span class='op'>*</span> <span class='fl'>1000</span>,
-  <span class='kw'>...</span>
-)</pre>
+    <pre class="usage"><span class='fu'>removeTimeslider</span>(<span class='kw'>map</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>color</th>
-      <td><p>colors of the CircleMarkers.</p></td>
-    </tr>
-    <tr>
-      <th>radius</th>
-      <td><p>a numeric value for the radius of the CircleMarkers.</p></td>
-    </tr>
-    <tr>
-      <th>tickLen</th>
-      <td><p>Set tick length in milliseconds. Increasing this value, may
-improve performance, at the cost of animation smoothness. Default is 250</p></td>
-    </tr>
-    <tr>
-      <th>speed</th>
-      <td><p>Set float multiplier for default animation speed. Default is 1</p></td>
-    </tr>
-    <tr>
-      <th>maxInterpolationTime</th>
-      <td><p>Set max interpolation time in seconds.
-Default is 5*60*1000 (5 minutes).</p></td>
-    </tr>
-    <tr>
-      <th>tracksLayer</th>
-      <td><p>Set <code>TRUE</code> if you want to show layer control on the
-map. Default is <code>TRUE</code></p></td>
-    </tr>
-    <tr>
-      <th>playControl</th>
-      <td><p>Set <code>TRUE</code> if play button is needed.
-Default is <code>TRUE</code></p></td>
-    </tr>
-    <tr>
-      <th>dateControl</th>
-      <td><p>Set <code>TRUE</code> if date label is needed.
-Default is <code>TRUE</code></p></td>
-    </tr>
-    <tr>
-      <th>sliderControl</th>
-      <td><p>Set <code>TRUE</code> if slider control is needed.
-Default is <code>TRUE</code></p></td>
-    </tr>
-    <tr>
-      <th>staleTime</th>
-      <td><p>Set time before a track is considered stale and faded out.
-Default is 60*60*1000 (1 hour)</p></td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td><p>Further arguments passed to `L.Playback`</p></td>
+      <th>map</th>
+      <td><p>the map widget</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A list of options for <code>addPlayback</code></p>
-    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
-
-    <p><a href='https://github.com/hallahan/LeafletPlayback'>https://github.com/hallahan/LeafletPlayback</a></p>
+    <p>the new <code>map</code> object</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p>Other Playback Functions: 
-<code><a href='addPlayback.html'>addPlayback</a>()</code>,
-<code><a href='removePlayback.html'>removePlayback</a>()</code></p></div>
+    <div class='dont-index'><p>Other Timeslider Functions: 
+<code><a href='addTimeslider.html'>addTimeslider</a>()</code>,
+<code><a href='timesliderOptions.html'>timesliderOptions</a>()</code></p></div>
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
