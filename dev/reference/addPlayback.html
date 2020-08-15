@@ -149,8 +149,7 @@ change the playback speed.</p>
     <tr>
       <th>data</th>
       <td><p>data must be a POINT Simple Feature or a list of POINT Simple
-Feature's with a time column. It can also be a JSON string which must be in
-a specific form. See the Details for further information.</p></td>
+Feature's with a time column.</p></td>
     </tr>
     <tr>
       <th>time</th>
@@ -174,24 +173,6 @@ a specific form. See the Details for further information.</p></td>
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>the new <code>map</code> object</p>
-    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
-
-    <p>If data is a JSON string, it must have the following form:</p><pre>
-{
-  "type": "Feature",
-  "geometry": {
-    "type": "MultiPoint",
-    "coordinates": [
-      [-123.2653968, 44.54962188],
-      [-123.26542599, 44.54951009]
-    ]
-},
-  "properties": {
-    "time": [1366067072000, 1366067074000]
-  }
-}
-</pre>
-
     <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
 
     <p>If used in Shiny, you can listen to 2 events</p><ul>
