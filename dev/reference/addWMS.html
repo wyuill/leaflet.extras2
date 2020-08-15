@@ -154,16 +154,14 @@ purposes)</p></td>
     </tr>
     <tr>
       <th>group</th>
-      <td><p>the name of the group the newly created layers should belong to
-(for <code><a href='https://rdrr.io/pkg/leaflet/man/remove.html'>clearGroup</a></code> and <code><a href='https://rdrr.io/pkg/leaflet/man/addLayersControl.html'>addLayersControl</a></code> purposes).
-Human-friendly group names are permitted--they need not be short,
-identifier-style names. Any number of layers and even different types of
-layers (e.g. markers and polygons) can share the same group name.</p></td>
+      <td><p>the name of the group the newly created layers should belong to.
+If <code>layers</code> contains multiple elements, the <code>layers</code> names are
+used as group-names.</p></td>
     </tr>
     <tr>
       <th>options</th>
-      <td><p>List of further options. See
-<code><a href='https://rdrr.io/pkg/leaflet/man/map-options.html'>WMSTileOptions</a></code></p></td>
+      <td><p>a list of extra options for tile layers, popups, paths
+(circles, rectangles, polygons, ...), or other map elements</p></td>
     </tr>
     <tr>
       <th>attribution</th>
