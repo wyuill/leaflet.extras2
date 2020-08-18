@@ -127,10 +127,11 @@ GetFeatureInfo-powered identify.</p>
     <pre class="usage"><span class='fu'>addWMS</span>(
   <span class='kw'>map</span>,
   <span class='kw'>baseUrl</span>,
-  layers = <span class='kw'>NULL</span>,
+  layerId = <span class='kw'>NULL</span>,
   group = <span class='kw'>NULL</span>,
   options = <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-options.html'>WMSTileOptions</a></span>(),
   attribution = <span class='kw'>NULL</span>,
+  layers = <span class='kw'>NULL</span>,
   popupOptions = <span class='kw'>NULL</span>,
   data = <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/getMapData.html'>getMapData</a></span>(<span class='kw'>map</span>)
 )</pre>
@@ -147,16 +148,16 @@ GetFeatureInfo-powered identify.</p>
       <td><p>a base URL of the WMS service</p></td>
     </tr>
     <tr>
-      <th>layers</th>
-      <td><p>vector or list of WMS layers to show. The name of the layer is
-used as the <code>layerId</code> (for <code><a href='https://rdrr.io/pkg/leaflet/man/remove.html'>removeTiles</a></code>
-purposes)</p></td>
+      <th>layerId</th>
+      <td><p>the layer id</p></td>
     </tr>
     <tr>
       <th>group</th>
-      <td><p>the name of the group the newly created layers should belong to.
-If <code>layers</code> contains multiple elements, the <code>layers</code> names are
-used as group-names.</p></td>
+      <td><p>the name of the group the newly created layers should belong to
+(for <code><a href='https://rdrr.io/pkg/leaflet/man/remove.html'>clearGroup</a></code> and <code><a href='https://rdrr.io/pkg/leaflet/man/addLayersControl.html'>addLayersControl</a></code> purposes).
+Human-friendly group names are permitted--they need not be short,
+identifier-style names. Any number of layers and even different types of
+layers (e.g. markers and polygons) can share the same group name.</p></td>
     </tr>
     <tr>
       <th>options</th>
@@ -166,6 +167,10 @@ used as group-names.</p></td>
     <tr>
       <th>attribution</th>
       <td><p>the attribution text of the tile layer (HTML)</p></td>
+    </tr>
+    <tr>
+      <th>layers</th>
+      <td><p>comma-separated list of WMS layers to show</p></td>
     </tr>
     <tr>
       <th>popupOptions</th>
