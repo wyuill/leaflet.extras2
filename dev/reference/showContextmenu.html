@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Changelog • leaflet.extras2</title>
+<title>showContextmenu — showContextmenu • leaflet.extras2</title>
 
 
 <!-- jquery -->
@@ -39,7 +39,8 @@
 
 
 
-<meta property="og:title" content="Changelog" />
+<meta property="og:title" content="showContextmenu — showContextmenu" />
+<meta property="og:description" content="Open the contextmenu at certain lat/lng-coordinates" />
 
 
 <meta name="robots" content="noindex">
@@ -58,7 +59,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-news">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -110,41 +111,69 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-      <h1 data-toc-skip>Changelog <small></small></h1>
-      <small>Source: <a href='https://github.com/trafficonese/leaflet.extras2/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
+    <h1>showContextmenu</h1>
+    <small class="dont-index">Source: <a href='https://github.com/trafficonese/leaflet.extras2/blob/master/R/contextmenu.R'><code>R/contextmenu.R</code></a></small>
+    <div class="hidden name"><code>showContextmenu.Rd</code></div>
     </div>
 
-    <div id="leafletextras2-development-version" class="section level1">
-<h1 class="page-header" data-toc-text="development version">
-<a href="#leafletextras2-development-version" class="anchor"></a>leaflet.extras2 (development version)<small> Unreleased </small>
-</h1>
-<ul>
-<li>Included <a href="https://github.com/aratcliffe/Leaflet.contextmenu">Leaflet Contextmenu</a> plugin</li>
-<li>Included <a href="https://github.com/dwilhelm89/LeafletSlider">Leaflet TimeSlider</a> plugin</li>
-<li>
-<code>addWMS</code> gained the <code>layerId</code> argument and works like <code><a href="https://rdrr.io/pkg/leaflet/man/map-layers.html">leaflet::addWMSTiles</a></code> except for the <code>popupOptions</code>
-</li>
-<li>
-<code>Side-by-Side</code> doesn’t propagate click events when dragging. Thanks to <code>f905a47</code> of <a href="https://github.com/digidem/leaflet-side-by-side/pull/23"><a href='https://github.com/trafficonese/leaflet.extras2/issues/23'>#23</a></a>
-</li>
-</ul>
-</div>
-    <div id="leafletextras2-100" class="section level1">
-<h1 class="page-header" data-toc-text="1.0.0">
-<a href="#leafletextras2-100" class="anchor"></a>leaflet.extras2 1.0.0<small> 2020-05-18 </small>
-</h1>
-<ul>
-<li>Initial release</li>
-</ul>
-</div>
-  </div>
+    <div class="ref-description">
+    <p>Open the contextmenu at certain lat/lng-coordinates</p>
+    </div>
 
+    <pre class="usage"><span class='fu'>showContextmenu</span>(<span class='kw'>map</span>, lat = <span class='kw'>NULL</span>, lng = <span class='kw'>NULL</span>, data = <span class='kw'>leaflet</span>::<span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/getMapData.html'>getMapData</a></span>(<span class='kw'>map</span>))</pre>
+
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>map</th>
+      <td><p>a map widget object created from <code><a href='https://rdrr.io/pkg/leaflet/man/leaflet.html'>leaflet</a>()</code></p></td>
+    </tr>
+    <tr>
+      <th>lat</th>
+      <td><p>a vector of latitudes or a formula (similar to the <code>lng</code>
+argument; the names <code>lat</code> and <code>latitude</code> are used when guessing
+the latitude column from <code>data</code>)</p></td>
+    </tr>
+    <tr>
+      <th>lng</th>
+      <td><p>a numeric vector of longitudes, or a one-sided formula of the form
+<code>~x</code> where <code>x</code> is a variable in <code>data</code>; by default (if not
+explicitly provided), it will be automatically inferred from <code>data</code> by
+looking for a column named <code>lng</code>, <code>long</code>, or <code>longitude</code>
+(case-insensitively)</p></td>
+    </tr>
+    <tr>
+      <th>data</th>
+      <td><p>the data object from which the argument values are derived; by
+default, it is the <code>data</code> object provided to <code><a href='https://rdrr.io/pkg/leaflet/man/leaflet.html'>leaflet()</a></code>
+initially, but can be overridden</p></td>
+    </tr>
+    </table>
+
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>A leaflet map object</p>
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p>Other Contextmenu Functions: 
+<code><a href='addContextmenu.html'>addContextmenu</a>()</code>,
+<code><a href='addItemContextmenu.html'>addItemContextmenu</a>()</code>,
+<code><a href='hideContextmenu.html'>hideContextmenu</a>()</code>,
+<code><a href='insertItemContextmenu.html'>insertItemContextmenu</a>()</code>,
+<code><a href='mapmenuItems.html'>mapmenuItems</a>()</code>,
+<code><a href='markermenuItems.html'>markermenuItems</a>()</code>,
+<code><a href='menuItem.html'>menuItem</a>()</code>,
+<code><a href='removeItemContextmenu.html'>removeItemContextmenu</a>()</code>,
+<code><a href='removeallItemsContextmenu.html'>removeallItemsContextmenu</a>()</code>,
+<code><a href='setDisabledContextmenu.html'>setDisabledContextmenu</a>()</code></p></div>
+
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>
     </nav>
   </div>
-
 </div>
 
 
