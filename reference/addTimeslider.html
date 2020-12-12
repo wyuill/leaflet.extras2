@@ -132,6 +132,7 @@ JQuery UI slider.</p>
   dashArray <span class='op'>=</span> <span class='cn'>NULL</span>,
   popup <span class='op'>=</span> <span class='cn'>NULL</span>,
   popupOptions <span class='op'>=</span> <span class='cn'>NULL</span>,
+  ordertime <span class='op'>=</span> <span class='cn'>TRUE</span>,
   options <span class='op'>=</span> <span class='fu'><a href='timesliderOptions.html'>timesliderOptions</a></span><span class='op'>(</span><span class='op'>)</span>
 <span class='op'>)</span></pre>
 
@@ -197,6 +198,12 @@ for security reasons)</p></td>
     <tr>
       <th>popupOptions</th>
       <td><p>A Vector of <code><a href='https://rdrr.io/pkg/leaflet/man/map-options.html'>popupOptions</a></code> to provide popups</p></td>
+    </tr>
+    <tr>
+      <th>ordertime</th>
+      <td><p>boolean value, indicating wether to order the data by the
+time column. The slider will adopt the order of the timestamps.
+The default is <code>TRUE</code>.</p></td>
     </tr>
     <tr>
       <th>options</th>
