@@ -72,7 +72,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">leaflet.extras2</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">1.0.0.9000</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">1.1.0.9000</span>
       </span>
     </div>
 
@@ -126,7 +126,8 @@
   range <span class='op'>=</span> <span class='cn'>FALSE</span>,
   follow <span class='op'>=</span> <span class='cn'>FALSE</span>,
   alwaysShowDate <span class='op'>=</span> <span class='cn'>FALSE</span>,
-  rezoom <span class='op'>=</span> <span class='cn'>NULL</span>
+  rezoom <span class='op'>=</span> <span class='cn'>NULL</span>,
+  sameDate <span class='op'>=</span> <span class='cn'>FALSE</span>
 <span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -154,8 +155,8 @@ Default is <code>0</code></p></td>
     </tr>
     <tr>
       <th>timeStrLength</th>
-      <td><p>the size of yyyy-mm-dd hh:mm:ss - if milliseconds are present this will be larger
-Default is <code>19</code></p></td>
+      <td><p>the size of yyyy-mm-dd hh:mm:ss - if milliseconds are
+present this will be larger. Default is <code>19</code></p></td>
     </tr>
     <tr>
       <th>maxValue</th>
@@ -191,6 +192,11 @@ Default is <code>FALSE</code></p></td>
       <th>rezoom</th>
       <td><p>Use the rezoom property to ensure the markers being displayed
 remain in view. Default is <code>NULL</code></p></td>
+    </tr>
+    <tr>
+      <th>sameDate</th>
+      <td><p>Show only data with the current selected time.
+Default is <code>FALSE</code></p></td>
     </tr>
     </table>
 

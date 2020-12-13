@@ -41,7 +41,7 @@
 
 <meta property="og:title" content="Add Time Slider to Leaflet — addTimeslider" />
 <meta property="og:description" content="The LeafletSlider plugin
-enables you to dynamically add and remove Markers on a map by using a
+enables you to dynamically add and remove Markers/Lines on a map by using a
 JQuery UI slider." />
 
 
@@ -74,7 +74,7 @@ JQuery UI slider." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">leaflet.extras2</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">1.0.0.9000</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">1.1.0.9000</span>
       </span>
     </div>
 
@@ -114,11 +114,27 @@ JQuery UI slider." />
 
     <div class="ref-description">
     <p>The <a href='https://github.com/dwilhelm89/LeafletSlider'>LeafletSlider plugin</a>
-enables you to dynamically add and remove Markers on a map by using a
+enables you to dynamically add and remove Markers/Lines on a map by using a
 JQuery UI slider.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>addTimeslider</span><span class='op'>(</span><span class='va'>map</span>, <span class='va'>data</span>, options <span class='op'>=</span> <span class='fu'><a href='timesliderOptions.html'>timesliderOptions</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>addTimeslider</span><span class='op'>(</span>
+  <span class='va'>map</span>,
+  <span class='va'>data</span>,
+  radius <span class='op'>=</span> <span class='fl'>10</span>,
+  stroke <span class='op'>=</span> <span class='cn'>TRUE</span>,
+  color <span class='op'>=</span> <span class='st'>"#03F"</span>,
+  weight <span class='op'>=</span> <span class='fl'>5</span>,
+  opacity <span class='op'>=</span> <span class='fl'>0.5</span>,
+  fill <span class='op'>=</span> <span class='cn'>TRUE</span>,
+  fillColor <span class='op'>=</span> <span class='va'>color</span>,
+  fillOpacity <span class='op'>=</span> <span class='fl'>0.2</span>,
+  dashArray <span class='op'>=</span> <span class='cn'>NULL</span>,
+  popup <span class='op'>=</span> <span class='cn'>NULL</span>,
+  popupOptions <span class='op'>=</span> <span class='cn'>NULL</span>,
+  ordertime <span class='op'>=</span> <span class='cn'>TRUE</span>,
+  options <span class='op'>=</span> <span class='fu'><a href='timesliderOptions.html'>timesliderOptions</a></span><span class='op'>(</span><span class='op'>)</span>
+<span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -129,7 +145,66 @@ JQuery UI slider.</p>
     </tr>
     <tr>
       <th>data</th>
-      <td><p>data must be a POINT Simple Feature with a time column.</p></td>
+      <td><p>data must be a Simple Feature collection of type POINT or LINESTRING
+with a column of class Date or POSIXct.</p></td>
+    </tr>
+    <tr>
+      <th>radius</th>
+      <td><p>a numeric vector of radii for the circles; it can also be a
+one-sided formula, in which case the radius values are derived from the
+<code>data</code> (units in meters for circles, and pixels for circle markers)</p></td>
+    </tr>
+    <tr>
+      <th>stroke</th>
+      <td><p>whether to draw stroke along the path (e.g. the borders of
+polygons or circles)</p></td>
+    </tr>
+    <tr>
+      <th>color</th>
+      <td><p>stroke color</p></td>
+    </tr>
+    <tr>
+      <th>weight</th>
+      <td><p>stroke width in pixels</p></td>
+    </tr>
+    <tr>
+      <th>opacity</th>
+      <td><p>stroke opacity (or layer opacity for tile layers)</p></td>
+    </tr>
+    <tr>
+      <th>fill</th>
+      <td><p>whether to fill the path with color (e.g. filling on polygons or
+circles)</p></td>
+    </tr>
+    <tr>
+      <th>fillColor</th>
+      <td><p>fill color</p></td>
+    </tr>
+    <tr>
+      <th>fillOpacity</th>
+      <td><p>fill opacity</p></td>
+    </tr>
+    <tr>
+      <th>dashArray</th>
+      <td><p>a string that defines the stroke
+<a href='https://developer.mozilla.org/en/SVG/Attribute/stroke-dasharray'>dash
+pattern</a></p></td>
+    </tr>
+    <tr>
+      <th>popup</th>
+      <td><p>a character vector of the HTML content for the popups (you are
+recommended to escape the text using <code><a href='https://rdrr.io/pkg/htmltools/man/htmlEscape.html'>htmlEscape</a>()</code>
+for security reasons)</p></td>
+    </tr>
+    <tr>
+      <th>popupOptions</th>
+      <td><p>A Vector of <code><a href='https://rdrr.io/pkg/leaflet/man/map-options.html'>popupOptions</a></code> to provide popups</p></td>
+    </tr>
+    <tr>
+      <th>ordertime</th>
+      <td><p>boolean value, indicating wether to order the data by the
+time column. The slider will adopt the order of the timestamps.
+The default is <code>TRUE</code>.</p></td>
     </tr>
     <tr>
       <th>options</th>
