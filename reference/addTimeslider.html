@@ -41,7 +41,7 @@
 
 <meta property="og:title" content="Add Time Slider to Leaflet — addTimeslider" />
 <meta property="og:description" content="The LeafletSlider plugin
-enables you to dynamically add and remove Markers on a map by using a
+enables you to dynamically add and remove Markers/Lines on a map by using a
 JQuery UI slider." />
 
 
@@ -114,7 +114,7 @@ JQuery UI slider." />
 
     <div class="ref-description">
     <p>The <a href='https://github.com/dwilhelm89/LeafletSlider'>LeafletSlider plugin</a>
-enables you to dynamically add and remove Markers on a map by using a
+enables you to dynamically add and remove Markers/Lines on a map by using a
 JQuery UI slider.</p>
     </div>
 
@@ -145,7 +145,8 @@ JQuery UI slider.</p>
     </tr>
     <tr>
       <th>data</th>
-      <td><p>data must be a POINT Simple Feature with a time column.</p></td>
+      <td><p>data must be a Simple Feature collection of type POINT or LINESTRING
+with a column of class Date or POSIXct.</p></td>
     </tr>
     <tr>
       <th>radius</th>
