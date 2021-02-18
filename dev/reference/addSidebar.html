@@ -41,9 +41,9 @@
 
 <meta property="og:title" content="Add a Sidebar Leaflet Control — addSidebar" />
 <meta property="og:description" content="The sidebar plugin only works in a reactive environment (e.g Shiny), as the
-HTML must be created by using sidebar_tabs and
-sidebar_pane and it must be created before
-leafletOutput." />
+HTML must be created with sidebar_tabs and
+sidebar_pane before
+leafletOutput is called." />
 
 
 <meta name="robots" content="noindex">
@@ -61,9 +61,15 @@ leafletOutput." />
 
 
 
+  
+
+  
+
   </head>
 
   <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -117,9 +123,9 @@ leafletOutput." />
 
     <div class="ref-description">
     <p>The sidebar plugin only works in a reactive environment (e.g Shiny), as the
-HTML must be created by using <code><a href='sidebar_tabs.html'>sidebar_tabs</a></code> and
-<code><a href='sidebar_pane.html'>sidebar_pane</a></code> and it must be created before
-<code><a href='https://rdrr.io/pkg/leaflet/man/map-shiny.html'>leafletOutput</a></code>.</p>
+HTML must be created with <code><a href='sidebar_tabs.html'>sidebar_tabs</a></code> and
+<code><a href='sidebar_pane.html'>sidebar_pane</a></code> before
+<code><a href='https://rdrr.io/pkg/leaflet/man/map-shiny.html'>leafletOutput</a></code> is called.</p>
     </div>
 
     <pre class="usage"><span class='fu'>addSidebar</span><span class='op'>(</span><span class='va'>map</span>, id <span class='op'>=</span> <span class='st'>"sidebar"</span>, options <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>position <span class='op'>=</span> <span class='st'>"left"</span>, fit <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span><span class='op'>)</span></pre>
@@ -159,8 +165,8 @@ HTML must be created by using <code><a href='sidebar_tabs.html'>sidebar_tabs</a>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
-<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://shiny.rstudio.com'>shiny</a></span><span class='op'>)</span>
-<span class='fu'><a href='https://shiny.rstudio.com/reference/shiny/latest/runApp.html'>runApp</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste0</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>"examples"</span>, package <span class='op'>=</span> <span class='st'>"leaflet.extras2"</span><span class='op'>)</span>,
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://shiny.rstudio.com/'>shiny</a></span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/shiny/man/runApp.html'>runApp</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste0</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>"examples"</span>, package <span class='op'>=</span> <span class='st'>"leaflet.extras2"</span><span class='op'>)</span>,
               <span class='st'>"/sidebar_app.R"</span><span class='op'>)</span><span class='op'>)</span>
 <span class='op'>}</span>
 </div></pre>
@@ -187,6 +193,8 @@ HTML must be created by using <code><a href='sidebar_tabs.html'>sidebar_tabs</a>
 
   
 
+
+  
 
   </body>
 </html>

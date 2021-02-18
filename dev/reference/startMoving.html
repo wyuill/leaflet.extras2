@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>openweatherCurrentOptions — openweatherCurrentOptions • leaflet.extras2</title>
+<title>Interact with the moving markers — startMoving • leaflet.extras2</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,8 @@
 
 
 
-<meta property="og:title" content="openweatherCurrentOptions — openweatherCurrentOptions" />
-<meta property="og:description" content="openweatherCurrentOptions" />
+<meta property="og:title" content="Interact with the moving markers — startMoving" />
+<meta property="og:description" content="The marker begins its path or resumes if it is paused." />
 
 
 <meta name="robots" content="noindex">
@@ -113,52 +113,78 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>openweatherCurrentOptions</h1>
-    <small class="dont-index">Source: <a href='https://github.com/trafficonese/leaflet.extras2/blob/master/R/openweather.R'><code>R/openweather.R</code></a></small>
-    <div class="hidden name"><code>openweatherCurrentOptions.Rd</code></div>
+    <h1>Interact with the moving markers</h1>
+    <small class="dont-index">Source: <a href='https://github.com/trafficonese/leaflet.extras2/blob/master/R/movingmarker.R'><code>R/movingmarker.R</code></a></small>
+    <div class="hidden name"><code>startMoving.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>openweatherCurrentOptions</p>
+    <p>The marker begins its path or resumes if it is paused.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>openweatherCurrentOptions</span><span class='op'>(</span>lang <span class='op'>=</span> <span class='st'>"en"</span>, minZoom <span class='op'>=</span> <span class='fl'>7</span>, interval <span class='op'>=</span> <span class='fl'>10</span>, <span class='va'>...</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>startMoving</span><span class='op'>(</span><span class='va'>map</span><span class='op'>)</span>
+
+<span class='fu'>stopMoving</span><span class='op'>(</span><span class='va'>map</span><span class='op'>)</span>
+
+<span class='fu'>pauseMoving</span><span class='op'>(</span><span class='va'>map</span><span class='op'>)</span>
+
+<span class='fu'>resumeMoving</span><span class='op'>(</span><span class='va'>map</span><span class='op'>)</span>
+
+<span class='fu'>addLatLngMoving</span><span class='op'>(</span><span class='va'>map</span>, <span class='va'>latlng</span>, <span class='va'>duration</span><span class='op'>)</span>
+
+<span class='fu'>moveToMoving</span><span class='op'>(</span><span class='va'>map</span>, <span class='va'>latlng</span>, <span class='va'>duration</span><span class='op'>)</span>
+
+<span class='fu'>addStationMoving</span><span class='op'>(</span><span class='va'>map</span>, <span class='va'>pointIndex</span>, <span class='va'>duration</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>lang</th>
-      <td><p>'en', 'de', 'ru', 'fr', 'es', 'ca'. Language of popup texts.
-Note: not every translation is finished yet.</p></td>
+      <th>map</th>
+      <td><p>The leafletProxy object</p></td>
     </tr>
     <tr>
-      <th>minZoom</th>
-      <td><p>Number (7). Minimal zoom level for fetching city data. Use
-smaller values only at your own risk.</p></td>
+      <th>latlng</th>
+      <td><p>Coordinates as list (e.g.: <code><a href='https://rdrr.io/r/base/list.html'>list(33, -67)</a></code> or
+<code><a href='https://rdrr.io/r/base/list.html'>list(lng=-65, lat=33)</a></code>)</p></td>
     </tr>
     <tr>
-      <th>interval</th>
-      <td><p>Number (0). Time in minutes to reload city data. Please do
-not use less than 10 minutes.</p></td>
+      <th>duration</th>
+      <td><p>Duration in milliseconds</p></td>
     </tr>
     <tr>
-      <th>...</th>
-      <td><p>Further options passed to <code>L.OWM.current</code>. See the
-<a href='https://github.com/trafficonese/leaflet-openweathermap#options'>full
-list of options</a></p></td>
+      <th>pointIndex</th>
+      <td><p>Index of a certain point</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A list of options for <code>addOpenweatherCurrent</code></p>
+    <p>the new <code>map</code> object</p>
+    <h2 class="hasAnchor" id="functions"><a class="anchor" href="#functions"></a>Functions</h2>
+
+    
+<ul>
+<li><p><code>stopMoving</code>: Manually stops the marker, if you call <code>start</code>
+after, the marker starts again the polyline at the beginning.</p></li>
+<li><p><code>pauseMoving</code>: Pauses the marker</p></li>
+<li><p><code>resumeMoving</code>: The marker resumes its animation</p></li>
+<li><p><code>addLatLngMoving</code>: Adds a point to the polyline.
+Useful, if we have to set the path one by one.</p></li>
+<li><p><code>moveToMoving</code>: Stop the current animation and make the marker move
+to <code>latlng</code> in <code>duration</code> ms.</p></li>
+<li><p><code>addStationMoving</code>: The marker will stop at the <code>pointIndex</code> point
+of the polyline for <code>duration</code> milliseconds. You can't add a station
+at the first or last point of the polyline.</p></li>
+</ul>
+    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+
+    <p><a href='https://github.com/ewoken/Leaflet.MovingMarker'>https://github.com/ewoken/Leaflet.MovingMarker</a></p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p>Other Openweathermap Functions: 
-<code><a href='addOpenweatherCurrent.html'>addOpenweatherCurrent</a>()</code>,
-<code><a href='addOpenweatherTiles.html'>addOpenweatherTiles</a>()</code>,
-<code><a href='openweatherOptions.html'>openweatherOptions</a>()</code></p></div>
+    <div class='dont-index'><p>Other MovingMarker Functions: 
+<code><a href='addMovingMarker.html'>addMovingMarker</a>()</code>,
+<code><a href='movingMarkerOptions.html'>movingMarkerOptions</a>()</code></p></div>
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
