@@ -122,19 +122,19 @@
     <p>The marker begins its path or resumes if it is paused.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>startMoving</span><span class='op'>(</span><span class='va'>map</span><span class='op'>)</span>
+    <pre class="usage"><span class='fu'>startMoving</span><span class='op'>(</span><span class='va'>map</span>, layerId <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span>
 
-<span class='fu'>stopMoving</span><span class='op'>(</span><span class='va'>map</span><span class='op'>)</span>
+<span class='fu'>stopMoving</span><span class='op'>(</span><span class='va'>map</span>, layerId <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span>
 
-<span class='fu'>pauseMoving</span><span class='op'>(</span><span class='va'>map</span><span class='op'>)</span>
+<span class='fu'>pauseMoving</span><span class='op'>(</span><span class='va'>map</span>, layerId <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span>
 
-<span class='fu'>resumeMoving</span><span class='op'>(</span><span class='va'>map</span><span class='op'>)</span>
+<span class='fu'>resumeMoving</span><span class='op'>(</span><span class='va'>map</span>, layerId <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span>
 
-<span class='fu'>addLatLngMoving</span><span class='op'>(</span><span class='va'>map</span>, <span class='va'>latlng</span>, <span class='va'>duration</span><span class='op'>)</span>
+<span class='fu'>addLatLngMoving</span><span class='op'>(</span><span class='va'>map</span>, layerId <span class='op'>=</span> <span class='cn'>NULL</span>, <span class='va'>latlng</span>, <span class='va'>duration</span><span class='op'>)</span>
 
-<span class='fu'>moveToMoving</span><span class='op'>(</span><span class='va'>map</span>, <span class='va'>latlng</span>, <span class='va'>duration</span><span class='op'>)</span>
+<span class='fu'>moveToMoving</span><span class='op'>(</span><span class='va'>map</span>, layerId <span class='op'>=</span> <span class='cn'>NULL</span>, <span class='va'>latlng</span>, <span class='va'>duration</span><span class='op'>)</span>
 
-<span class='fu'>addStationMoving</span><span class='op'>(</span><span class='va'>map</span>, <span class='va'>pointIndex</span>, <span class='va'>duration</span><span class='op'>)</span></pre>
+<span class='fu'>addStationMoving</span><span class='op'>(</span><span class='va'>map</span>, layerId <span class='op'>=</span> <span class='cn'>NULL</span>, <span class='va'>pointIndex</span>, <span class='va'>duration</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -142,6 +142,12 @@
     <tr>
       <th>map</th>
       <td><p>The leafletProxy object</p></td>
+    </tr>
+    <tr>
+      <th>layerId</th>
+      <td><p>You can pass a string or a vector of strings for the moving
+markers that you want to address. If none is specified, the action will be
+applied to all moving markers.</p></td>
     </tr>
     <tr>
       <th>latlng</th>
