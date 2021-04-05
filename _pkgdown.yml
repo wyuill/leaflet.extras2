@@ -65,6 +65,10 @@ reference:
     contents:
     - matches("Reachability")
     - matches("reachability")
+  - title: Search
+    contents:
+    - matches("Search")
+    - matches("search")
   - title: Sidebar-v2
     contents:
     - matches("Sidebar")
